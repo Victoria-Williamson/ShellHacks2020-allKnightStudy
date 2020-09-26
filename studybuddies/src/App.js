@@ -35,14 +35,7 @@ function App() {
     // Initialize the FirebaseUI Widget using Firebase.
     
     var ui = new firebaseui.auth.AuthUI(firebase.auth());
-    ui.start('#firebaseui-auth-container', {
-        signInOptions: [
-          {
-            provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-            requireDisplayName: false
-          }
-        ]
-      });
+    
       var uiConfig = {
         callbacks: {
           signInSuccessWithAuthResult: function(authResult, redirectUrl) {
@@ -90,13 +83,61 @@ function App() {
           // User is signed out.
           // ...
         }
-      ui.start('#firebaseui-auth-container', uiConfig)
+     
   
       });
 
+      window.onclick = function(e)
+      {
+        // Allows Google Sign in 
+        if (e.target.id="Google")
+          {
+            var provider = new firebase.auth.GoogleAuthProvider();
+            provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+            firebase.auth().languageCode = 'eng';
+            firebase.auth().signInWithRedirect(provider);
+            firebase.auth().getRedirectResult().then(function(result) {
+              if (result.credential) {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                var token = result.credential.accessToken;
+                // ...
+              }
+              // The signed-in user info.
+              var user = result.user;
+            }).catch(function(error) {
+              // Handle Errors here.
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              // The email of the user's account used.
+              var email = error.email;
+              // The firebase.auth.AuthCredential type that was used.
+              var credential = error.credential;
+              // ...
+            });
+          }
+         // Allows Twitter Sign in
+         else if(e.target.id="Twitter")
+         {
+          console.log("twitter");
+         }
+         
+         else if(e.target.id="Facebook")
+         {
+          console.log("facebook");
+         }
+         else if(e.target.id="Email")
+         {
+           console.log('email');
+         }
+      }
+     
+
       
+      
+
   return (
     <div className="App">
+      <div id="Google"> google </div>
       AuthPage
             <div id="firebaseui-auth-container"></div>
             <div id="loader">Loading...</div>

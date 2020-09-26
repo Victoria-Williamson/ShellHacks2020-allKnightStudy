@@ -45,3 +45,7 @@
   font-weight: bolder;
   color: whitesmoke;
 }
+#Google {
+  position: absolute;
+  top:40%;
+}
