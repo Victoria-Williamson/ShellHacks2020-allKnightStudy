@@ -95,11 +95,21 @@
 }
 .doodles {
 	max-height: 50%;
-	width: auto;
+  width: auto;
 }
-
+#img2{
+  left:400px;
+}
+#text2 {
+  left: 30px;
+  top: 20%;
+  text-align: justify;
+}
 .webtext-24 {
-	font-style: "Roboto";
+  font-style: "Roboto";
+  width: 400px;
+  position: absolute;
+  font-size: larger;
 }
 
 .divider-line {
