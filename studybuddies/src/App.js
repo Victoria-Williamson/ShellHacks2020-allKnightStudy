@@ -42,13 +42,20 @@ function App() {
     firebase.initializeApp(firebaseConfig);
     /*const db = firebase.firestore();
       db.collection("users").add({
-        first: "Alan",
-        middle: "Mathison",
-        last: "Turing",
-        born: 1912
+        email: "something@google.com",
+        lookingFor: "friend",
+        major: "Computer Science",
+        password: "1235334q32",
+        school:"UCF",
+        status:"online",
+        userName:"ucf111",
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
+        var currentDoc = db.collection("users").doc(docRef.id);
+        var setID = currentDoc.set({
+          id: docRef.id},
+          {merge: true});
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
