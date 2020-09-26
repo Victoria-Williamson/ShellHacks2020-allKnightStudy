@@ -9,6 +9,7 @@ import "firebase/analytics";
 // Add the Firebase products that you want to use
 import "firebase/auth";
 import "firebase/firestore";
+import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 var firebase = require('firebase'); // Needed whenever using firestore !!
 var firebaseui = require('firebaseui');
 
@@ -17,6 +18,21 @@ require("firebase/firestore");
 
 
 function App() {
+  class User {
+    constructor(id, email, lookingFor, major, password, profilePic, school, status, userName)
+    {
+      this.email = email;
+      this.id = id;
+      this.lookingFor = lookingFor;
+      this.major = major;
+      this.password = password;
+      this.profilePic = profilePic;
+      this.school = school;
+      this.status = status;
+      this.userName = userName;
+
+    }
+  }
   /*firebase.initializeApp({
     apiKey:"AIzaSyAR8bAOpBYHJwJMZ39gMgvuZgsgFf1M8f8",
     authDomain: "studybuddies-99115.firebaseapp.com",
@@ -37,10 +53,10 @@ function App() {
     appId: "1:32121492623:web:a0d1cf11d163079ddfccfa",
     measurementId: "G-228FFW8HMV"
   };
-
+  var user;
     // Needed to push to cloude firestore !!!!
-    firebase.initializeApp(firebaseConfig);
-    /*const db = firebase.firestore();
+    /*firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
       db.collection("users").add({
         email: "something@google.com",
         lookingFor: "friend",
@@ -56,12 +72,15 @@ function App() {
         var setID = currentDoc.set({
           id: docRef.id},
           {merge: true});
+
+        user = new User(docRef.id,"something@google.com","friend", "Computer Science","1235334q32","img","UCF", "online", "ucf111");
+        console.log(user);
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
-    });*/
-    
-   
+    });
+    */
+  
   
 
     // Initialize the FirebaseUI Widget using Firebase.
