@@ -9,11 +9,22 @@ import "firebase/analytics";
 // Add the Firebase products that you want to use
 import "firebase/auth";
 import "firebase/firestore";
-var firebase = require('firebase');
+var firebase = require('firebase'); // Needed whenever using firestore !!
 var firebaseui = require('firebaseui');
+
+// Required for side-effects
+require("firebase/firestore");
 
 
 function App() {
+  /*firebase.initializeApp({
+    apiKey:"AIzaSyAR8bAOpBYHJwJMZ39gMgvuZgsgFf1M8f8",
+    authDomain: "studybuddies-99115.firebaseapp.com",
+    projectId: "studybuddies-99115",
+  });*/
+  
+
+
 
   const firebaseConfig = {
     
@@ -27,11 +38,25 @@ function App() {
     measurementId: "G-228FFW8HMV"
   };
 
-     window.onclick = function(e)
-    {
-      console.log(e);
-    }
+    // Needed to push to cloude firestore !!!!
     firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+      db.collection("users").add({
+        first: "Alan",
+        middle: "Mathison",
+        last: "Turing",
+        born: 1912
+    })
+    .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
+    
+   
+  
+
     // Initialize the FirebaseUI Widget using Firebase.
     
     var ui = new firebaseui.auth.AuthUI(firebase.auth());
@@ -118,12 +143,54 @@ function App() {
          // Allows Twitter Sign in
          else if(e.target.id="Twitter")
          {
-          console.log("twitter");
+          var provider = new firebase.auth.TwitterAuthProvider();
+          firebase.auth().languageCode = 'eng';
+          firebase.auth().signInWithRedirect(provider);
+          firebase.auth().getRedirectResult().then(function(result) {
+            if (result.credential) {
+              // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+              // You can use these server side with your app's credentials to access the Twitter API.
+              var token = result.credential.accessToken;
+              var secret = result.credential.secret;
+              // ...
+            }
+            // The signed-in user info.
+            var user = result.user;
+          }).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+          });
          }
          
          else if(e.target.id="Facebook")
          {
-          console.log("facebook");
+          var provider = new firebase.auth.FacebookAuthProvider();
+          provider.addScope('user_email');
+          firebase.auth().signInWithRedirect(provider);
+          firebase.auth().getRedirectResult().then(function(result) {
+            if (result.credential) {
+              // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+              var token = result.credential.accessToken;
+              // ...
+            }
+            // The signed-in user info.
+            var user = result.user;
+          }).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+          });
          }
          else if(e.target.id="Email")
          {
