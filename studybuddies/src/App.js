@@ -8,6 +8,11 @@ import googleLogo from "./authImages/Google.png";
 import twiiterLogo from "./authImages/Twitter.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button} from 'react-bootstrap';
+import titleBar from "./authImages/title-bar.png";
+import dividerLine from "./authImages/divider-line.png"
+import topRowImg from "./authImages/topImage.png";
+import middleRowImg from "./authImages/middleImage.png";
+import leftRowImg from "./authImages/bottomImage.png";
 var firebase = require('firebase'); // Needed whenever using firestore !!
 var firebaseui = require('firebaseui');
 
@@ -245,6 +250,31 @@ function App() {
         */
   return (
     <div className="App">
+       <div id="leftSideGraphics">
+      <div id="topRow">
+        <div className="topgraphicImg" id="topRowImg">
+          <img height="200" width="200"src={topRowImg}></img>
+        </div>
+        <div className="topgraphicImg" id="topRowTxt">
+        <img height="200" width="200" src={topRowImg}></img>
+        </div>
+        <div className="middlegraphicImg" id="middleRowImg">
+        <img height="200" width="200" src={middleRowImg}></img>
+        </div>
+        <div className="middlegraphicImg" id="middleRowTxt">
+          <img height="200" width="200" src={middleRowImg}></img>
+        </div>
+        <div className="bottomgraphicImg" id="leftRowImg">
+          <img height="200" width="200" src={leftRowImg}></img>
+        </div>
+        <div className="bottomgraphicImg" id="leftRowTxt">
+          <img height="200" width="200" src={leftRowImg}></img>
+        </div>
+      </div>
+    </div>
+      <div id="titleBar">
+        <img id ="titleBar" src={titleBar}></img>
+      </div>
       <div id="authLogos">
       <div id="Google">
       <img className="authLogo" src={googleLogo}></img>

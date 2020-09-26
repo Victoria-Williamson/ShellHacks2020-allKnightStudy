@@ -30,6 +30,17 @@
 #tab5{
   left:550px;
 }
+.graphicImg {
+  position: absolute;
+}
+#topRowImg {
+  top:30px;
+  left:10px;
+}
+#topRowTxt {
+  top:30px;
+  left:10px;
+}
 
 #toggleLogin {
   position: absolute;
@@ -49,6 +60,22 @@
   top:20px;
   left:20px;
 }
+.topgraphicImg{
+  position: absolute;
+  top:150px;
+  margin-top: 50px;
+}
+.bottomgraphicImg {
+  position: absolute;
+  top: 300px;
+  margin-top: 20px;
+}
+
+.middlegraphicImg {
+  position: absolute;
+  top: 500px;
+  margin-top: 70px;
+}
 /* Authentication CSS */
 .auth {
   position: absolute;
@@ -57,7 +84,11 @@
   font-weight: bolder;
   color: whitesmoke;
 }
-
+#titleBar {
+  top:0px;
+  margin-top: 10px;
+  position: absolute;
+}
 #signIn {
   position: absoloute;
   top:40%;
