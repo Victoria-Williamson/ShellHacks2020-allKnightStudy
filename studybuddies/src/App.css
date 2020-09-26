@@ -36,7 +36,19 @@
   right: 20px;
   z-index: 10;
 }
-
+#Twitter {
+  position: absolute;
+  left: 80px;
+}
+#Google {
+  position: absolute;
+  left: 160px;
+}
+#authLogos {
+  position: absolute;
+  top:20px;
+  left:20px;
+}
 /* Authentication CSS */
 .auth {
   position: absolute;
@@ -45,10 +57,7 @@
   font-weight: bolder;
   color: whitesmoke;
 }
-#Google {
-  position: absolute;
-  top:40%;
-}
+
 #signIn {
   position: absoloute;
   top:40%;

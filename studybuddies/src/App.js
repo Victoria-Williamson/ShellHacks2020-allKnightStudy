@@ -1,17 +1,15 @@
 import React from 'react';
 import './App.css';
-// Firebase App (the core Firebase SDK) is always required and must be listed first
-//import * as firebase from "firebase/app";
-
-// If you enabled Analytics in your project, add the Firebase SDK for Analytics
 import "firebase/analytics";
-
-// Add the Firebase products that you want to use
 import "firebase/auth";
 import "firebase/firestore";
-import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
+import facebookLogo from "./authImages/Facebook.png";
+import googleLogo from "./authImages/Google.png";
+import twiiterLogo from "./authImages/Twitter.png";
+import 'bootstrap/dist/css/bootstrap.min.css';
 var firebase = require('firebase'); // Needed whenever using firestore !!
 var firebaseui = require('firebaseui');
+
 
 // Required for side-effects
 require("firebase/firestore");
@@ -246,13 +244,18 @@ function App() {
         */
   return (
     <div className="App">
-      <div id="SignIn">
-      <div id="Google"> google </div>
-      <div id="Twitter"> twitter </div>
-      <div id="Email"> email </div>
-      <div id="Facebook"> facebook </div>
+      <div id="authLogos">
+      <div id="Google">
+      <img className="authLogo" src={googleLogo}></img>
       </div>
-    </div>
+      <div className="authLogo" id="Twitter">
+      <img src={twiiterLogo}></img>
+      </div>
+     <div className="authLogo" id="Facebook">
+       <img src={facebookLogo}></img>
+     </div>
+     </div>
+      </div>
   );
 }
 
