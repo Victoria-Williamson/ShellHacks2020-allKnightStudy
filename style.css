@@ -1,0 +1,445 @@
+body {
+    background: #E5E5E5;
+}
+
+.titletxt {
+    /* allKnight Study */
+
+
+    position: absolute;
+    width: 498px;
+    height: 36px;
+    left: 468px;
+    top: 31px;
+
+    font-family: Reem Kufi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 30px;
+    /* or 60% */
+
+    text-align: center;
+
+    /* Gray 6 */
+
+    color: #F2F2F2;
+}
+
+.txt1 {
+    /* Quarantine got you down? Tired of studying on your own? Let us find you a study buddy! Our service is perfect for those extroverts that just love having someone by their side while they’re hitting the books. */
+
+
+    position: absolute;
+    width: 404px;
+    height: 148px;
+    left: 266px;
+    top: 174px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+
+
+    /* Gray 2 */
+
+    color: #4F4F4F;
+}
+
+.txt2 {
+    /* Select your major, fill out a bio, and choose the amount of time you’d like to study. We’ll automatically search through our users and display study buddy matches for you. Select a buddy and get to studying! */
+
+
+    position: absolute;
+    width: 402px;
+    height: 146px;
+    left: 32px;
+    top: 448px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+
+
+    /* Gray 2 */
+
+    color: #4F4F4F;
+}
+
+.txt3 {
+    /* Turn on your webcam and say hi to your new study buddy! Feel free to chat while you’re studying and maybe you’ll even walk away from your study session with a new friend. Our service is perfect adding accountability into your studying session. */
+
+
+    position: absolute;
+    width: 394px;
+    height: 180px;
+    left: 276px;
+    top: 717px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+
+
+    /* Gray 2 */
+
+    color: #4F4F4F;
+}
+
+.txt4 {
+    /* Ready to find yourself a study buddy? Sign up for allKnight Study today! */
+
+
+    position: absolute;
+    width: 516px;
+    height: 181px;
+    left: 788px;
+    top: 121px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 47px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Gray 2 */
+
+    color: #4F4F4F;
+}
+
+.txt5 {
+    /* Hey there (Username)! Welcome back to allKnight Study! Edit your profile or sign up for your next study session below. */
+
+
+    position: absolute;
+    width: 399px;
+    height: 163px;
+    left: 268px;
+    top: 110px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    /* or 125% */
+
+    display: flex;
+    align-items: center;
+
+    /* Gray 2 */
+
+    color: #4F4F4F;
+}
+
+.txt6 {
+    /* You’re talking to (Username). Wave hello! Why don’t you say something nice? */
+
+
+    position: absolute;
+    width: 407px;
+    height: 163px;
+    left: 1016px;
+    top: 91px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+
+    /* Gray 2 */
+
+    color: #4F4F4F;
+}
+
+.title {
+    /* Title Bar */
+
+
+    position: absolute;
+    width: 1364.19px;
+    height: 64.25px;
+    left: 37.9px;
+    top: 16.88px;
+
+    /* Red */
+
+    background: #EB5757;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.chattitle {
+    /* Title Bar */
+
+
+    position: absolute;
+    width: 1440px;
+    height: 64px;
+    left: 0px;
+    top: 0px;
+
+    /* Red */
+
+    background: #EB5757;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle {
+    /* Rectangle 1 */
+
+
+    position: absolute;
+    width: 1262px;
+    height: 64px;
+    left: 89px;
+    top: 17px;
+
+    /* Red */
+
+    background: #EB5757;
+}
+
+.rectangle2 {
+    /* Rectangle 1 */
+
+
+    position: absolute;
+    width: 1440px;
+    height: 64px;
+    left: 0px;
+    top: 0px;
+
+    /* Red */
+
+    background: #EB5757;
+}
+
+.poly1 {
+    /* Polygon 1 */
+
+
+    position: absolute;
+    width: 118px;
+    height: 85.5px;
+    left: 1410px;
+    top: 81px;
+
+    /* Red */
+
+    background: #EB5757;
+    transform: rotate(-180deg);
+}
+
+.poly2 {
+    /* Polygon 2 */
+
+
+    position: absolute;
+    width: 118px;
+    height: 85.5px;
+    left: 30px;
+    top: 17px;
+
+    /* Red */
+
+    background: #EB5757;
+}
+
+.line1 {
+    /* Line 1 */
+
+
+    position: absolute;
+    width: 906px;
+    height: 0px;
+    left: 717px;
+    top: 103px;
+
+    /* Gray 4 */
+
+    border: 1px solid #BDBDBD;
+    transform: rotate(89.81deg);
+}
+
+
+.line2 {
+    /* Line 2 */
+
+
+    position: absolute;
+    width: 206px;
+    height: 0px;
+    left: 797px;
+    top: 462px;
+
+    /* Gray 4 */
+
+    border: 1px solid #BDBDBD;
+}
+
+.line3 {
+    /* Line 3 */
+
+
+    position: absolute;
+    width: 206px;
+    height: 0px;
+    left: 1090px;
+    top: 462px;
+
+    /* Gray 4 */
+
+    border: 1px solid #BDBDBD;
+}
+
+.line4 {
+    /* Line 4 */
+
+
+    position: absolute;
+    width: 906px;
+    height: 0px;
+    left: 992px;
+    top: 91px;
+
+    /* Gray 4 */
+
+    border: 1px solid #BDBDBD;
+    transform: rotate(89.81deg);
+}
+
+.line5 {
+    /* Line 5 */
+
+
+    position: absolute;
+    width: 450px;
+    height: 0px;
+    left: 995px;
+    top: 268px;
+
+    /* Gray 4 */
+
+    border: 1px solid #BDBDBD;
+}
+
+.line6 {
+    /* Line 6 */
+
+
+    position: absolute;
+    width: 450px;
+    height: 0px;
+    left: 995px;
+    top: 886px;
+
+    /* Gray 4 */
+
+    border: 1px solid #BDBDBD;
+}
+
+@media (max-width: 200px) {
+
+    .img1 {
+        /* image 1 */
+
+
+        position: absolute;
+        height: 182.09px;
+        left: 38px;
+        top: 157px;
+
+        background: url(image.png);
+    }
+
+    .img2 {
+        /* image 2 */
+
+
+        position: absolute;
+        height: 193.1px;
+        left: 470px;
+        top: 424px;
+
+        background: url(image.png);
+    }
+
+    .img3 {
+        /* image 3 */
+
+
+        position: absolute;
+        height: 194.4px;
+        left: 38px;
+        top: 702px;
+
+        background: url(image.png);
+    }
+
+    .img4 {
+        /* miroodles (7) 1 */
+
+
+        position: absolute;
+        height: 185.78px;
+        left: 38px;
+        top: 98px;
+
+        background: url(miroodles (7).png);
+    }
+}
+
+@media(max-width: 64px) {
+
+    .fa-facebook {
+        /* Facebook 1 */
+
+
+        position: absolute;
+        height: 64px;
+        left: 926px;
+        top: 356px;
+
+        background: url(Facebook.png);
+    }
+
+    .fa-twitter {
+        /* Twitter 1 */
+
+
+        position: absolute;
+        height: 64px;
+        left: 1014px;
+        top: 356px;
+
+        background: url(Twitter.png);
+    }
+
+    .fa-google {
+        /* Google+ 1 */
+
+
+        position: absolute;
+        height: 64px;
+        left: 1102px;
+        top: 356px;
+
+        background: url(Google+.png);
+    }
+
+}
