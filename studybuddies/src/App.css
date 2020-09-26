@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+#tabBar
+{
+  top:10px;
+  width: 100%;
+  position: absolute;
+  background-color: lightblue;
+  height:50px;
+}
+.tabButton 
+{
+  top:0px;
+  font-size: larger;
+  font-weight: bolder;
+  color: whitesmoke;
+  position: absolute;
+  margin-left: 20px;
+}
+#tab1{
+  left:150px;
+}
+#tab2 {
+  left:250px;
+}
+#tab3 {
+  left:350px;
+}
+#tab4{
+  left:450px;
+}
+#tab5{
+  left:550px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#toggleLogin {
+  position: absolute;
+  right: 20px;
+  z-index: 10;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Authentication CSS */
+.auth {
+  position: absolute;
+  top:0px;
+  font-size: larger;
+  font-weight: bolder;
+  color: whitesmoke;
 }
