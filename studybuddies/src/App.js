@@ -7,6 +7,7 @@ import facebookLogo from "./authImages/Facebook.png";
 import googleLogo from "./authImages/Google.png";
 import twiiterLogo from "./authImages/Twitter.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button} from 'react-bootstrap';
 var firebase = require('firebase'); // Needed whenever using firestore !!
 var firebaseui = require('firebaseui');
 
