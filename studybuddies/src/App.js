@@ -134,14 +134,8 @@ function App() {
 
       
       
-
-  return (
-    <div className="App">
-      <div id="Google"> google </div>
-      AuthPage
-            <div id="firebaseui-auth-container"></div>
-            <div id="loader">Loading...</div>
-      <div id="tabBar">
+      /*
+       <div id="tabBar">
         <div id="websiteSymbol"> *insert symbol* </div>
         <div className="tabButton" id="tab1" href="#"> Tab 1</div>
         <div className="tabButton" id="tab2" href="#"> Tab 2</div>
@@ -156,8 +150,15 @@ function App() {
         <div className="auth" id="signUp">
           Sign Up
         </div>
+        */
+  return (
+    <div className="App">
+      <div id="SignIn">
+      <div id="Google"> google </div>
+      <div id="Twitter"> twitter </div>
+      <div id="Email"> email </div>
+      <div id="Facebook"> facebook </div>
       </div>
-      Nothing Here yet, but this can be the main page 
     </div>
   );
 }
