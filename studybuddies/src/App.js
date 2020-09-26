@@ -55,8 +55,8 @@ function App() {
   };
   var user;
     // Needed to push to cloude firestore !!!!
-    /*firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
+    firebase.initializeApp(firebaseConfig);
+    /*const db = firebase.firestore();
       db.collection("users").add({
         email: "something@google.com",
         lookingFor: "friend",
