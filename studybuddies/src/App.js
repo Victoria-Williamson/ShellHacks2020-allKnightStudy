@@ -40,7 +40,7 @@ function App() {
 
     // Needed to push to cloude firestore !!!!
     firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
+    /*const db = firebase.firestore();
       db.collection("users").add({
         first: "Alan",
         middle: "Mathison",
@@ -52,7 +52,7 @@ function App() {
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
-    });
+    });*/
     
    
   
