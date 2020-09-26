@@ -250,27 +250,37 @@ function App() {
         */
   return (
     <div className="App">
-       <div id="leftSideGraphics">
-      <div id="topRow">
-        <div className="topgraphicImg" id="topRowImg">
-          <img height="200" width="200"src={topRowImg}></img>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" padding-top="0.5" text-align="center">
+                <img src="img/title-bar.png" class="title-bar"/>
+            </div>
         </div>
-        <div className="topgraphicImg" id="topRowTxt">
-        <img height="200" width="200" src={topRowImg}></img>
+        <div class="row">
+            <div class="col-md-6"> 
+                <div class="row">
+                    <div class="col-md-1"><img src={topRowImg} className="doodles"/></div>
+                    <div class="col-md-11">
+                        <p class="webtext-24" margin-top="10%" margin-left="40%">Quarantine got you down? Tired of studying on your own? Let us find you a study buddy! Our service is perfect for those extroverts that just love having someone by their side while they’re hitting the books.</p>
+                    </div>
+                </div>
+                <div class="row" margin-top= "-25%;">
+                    <div class="col-md-11">
+                        <p class="webtext-24" margin-top="7.5%" margin-left="5%" margin-right="35%" >Select your major, fill out a bio, and choose the amount of time you’d like to study. We’ll automatically search through our users and display study buddy matches for you. Select a buddy and get to studying!</p>
+                    </div>
+                    <div class="col-md-1"><img src={middleRowImg} class="doodles" float = "right"/></div>
+                </div>
+                <div class="row" margin-top= "-25%">
+                    <div class="col-md-1"><img src={leftRowImg} className="doodles"/></div>
+                    <div class="col-md-11">
+                        <p class="webtext-24" margin-top="7.5%" margin-left="40%">Turn on your webcam and say hi to your new study buddy! Feel free to chat while you’re studying and maybe you’ll even walk away from your study session with a new friend. Our service is perfect adding accountability into your studying session.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="img/divider-line.png" class="divider-line"/>
+            </div>
         </div>
-        <div className="middlegraphicImg" id="middleRowImg">
-        <img height="200" width="200" src={middleRowImg}></img>
-        </div>
-        <div className="middlegraphicImg" id="middleRowTxt">
-          <img height="200" width="200" src={middleRowImg}></img>
-        </div>
-        <div className="bottomgraphicImg" id="leftRowImg">
-          <img height="200" width="200" src={leftRowImg}></img>
-        </div>
-        <div className="bottomgraphicImg" id="leftRowTxt">
-          <img height="200" width="200" src={leftRowImg}></img>
-        </div>
-      </div>
     </div>
       <div id="titleBar">
         <img id ="titleBar" src={titleBar}></img>

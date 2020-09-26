@@ -93,3 +93,16 @@
   position: absoloute;
   top:40%;
 }
+.doodles {
+	max-height: 50%;
+	width: auto;
+}
+
+.webtext-24 {
+	font-style: "Roboto";
+}
+
+.divider-line {
+	max-height: 80%;
+	width: auto;
+}
