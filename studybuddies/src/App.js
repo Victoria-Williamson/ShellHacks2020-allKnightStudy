@@ -253,22 +253,22 @@ function App() {
        <div id="leftSideGraphics">
       <div id="topRow">
         <div className="topgraphicImg" id="topRowImg">
-          <img height="250" width="250"src={topRowImg}></img>
+          <img height="200" width="200"src={topRowImg}></img>
         </div>
         <div className="topgraphicImg" id="topRowTxt">
-        <img height="250" width="250" src={topRowImg}></img>
+        <img height="200" width="200" src={topRowImg}></img>
         </div>
         <div className="middlegraphicImg" id="middleRowImg">
-        <img height="250" width="250" src={middleRowImg}></img>
+        <img height="200" width="200" src={middleRowImg}></img>
         </div>
         <div className="middlegraphicImg" id="middleRowTxt">
-          <img height="250" width="250" src={middleRowImg}></img>
+          <img height="200" width="200" src={middleRowImg}></img>
         </div>
         <div className="bottomgraphicImg" id="leftRowImg">
-          <img height="250" width="250"src={leftRowImg}></img>
+          <img height="200" width="200" src={leftRowImg}></img>
         </div>
         <div className="bottomgraphicImg" id="leftRowTxt">
-          <img height="250" width="250" src={leftRowImg}></img>
+          <img height="200" width="200" src={leftRowImg}></img>
         </div>
       </div>
     </div>
