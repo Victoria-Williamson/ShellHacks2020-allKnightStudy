@@ -37,17 +37,15 @@ function App() {
       this.school = school;
       this.status = status;
       this.userName = userName;
-
     }
   }
+  
   /*firebase.initializeApp({
     apiKey:"AIzaSyAR8bAOpBYHJwJMZ39gMgvuZgsgFf1M8f8",
     authDomain: "studybuddies-99115.firebaseapp.com",
     projectId: "studybuddies-99115",
   });*/
   
-
-
 
   const firebaseConfig = {
     
@@ -60,10 +58,12 @@ function App() {
     appId: "1:32121492623:web:a0d1cf11d163079ddfccfa",
     measurementId: "G-228FFW8HMV"
   };
+
+  /*
   var user;
     // Needed to push to cloude firestore !!!!
     firebase.initializeApp(firebaseConfig);
-    /*const db = firebase.firestore();
+    const db = firebase.firestore();
       db.collection("users").add({
         email: "something@google.com",
         lookingFor: "friend",
@@ -86,9 +86,51 @@ function App() {
     .catch(function(error) {
         console.error("Error adding document: ", error);
     });
+
+    //load profile: when click "my profile"
+    const loadButton = document.querySelector("#loadButton");
+    
+    loadButton.addEventListener("click", function() {
+      docRef.get().then(function (doc){
+        if(doc && doc.exists){
+          const userInfo = doc.data();
+          userNameOut.innerText = "UserName: " + userInfo.userName;
+          idOut.innerText = "ID: " + userInfo.id;
+          passwordOut.innerText = "Password " + userInfo.password;
+          emailOut.innerText = "Email: " + userInfo.email;
+          schoolOut.innerText = "School: " + userInfo.school;
+          majorOut.innerText = "Major: " + userInfo.Major;
+          statusOut.innerText = "Status: " + userInfo.status;
+        }
+      }).catch(function (error){
+        console.log("Error loading profile: ", error);
+      });
+    });
+
+    // get real time update after changing the file: after editing the profile
+    getRealTimeUpdates = function(){
+      docRef.onSnapshot(function (doc){
+        if(doc && doc.exists){
+          const userInfo = doc.data();
+          userNameOut.innerText = "UserName: " + userInfo.userName;
+          idOut.innerText = "ID: " + userInfo.id;
+          passwordOut.innerText = "Password " + userInfo.password;
+          emailOut.innerText = "Email: " + userInfo.email;
+          schoolOut.innerText = "School: " + userInfo.school;
+          majorOut.innerText = "Major: " + userInfo.Major;
+          statusOut.innerText = "Status: " + userInfo.status;
+        }
+      });
+    };
+    getRealTimeUpdates();
+
+    //edit profile
+
+
+
+
+      
     */
-  
-  
 
     // Initialize the FirebaseUI Widget using Firebase.
     
