@@ -16,22 +16,38 @@ function VideoChat ()
             this.date = date;
         }
     }
-
+    var currentInvite;
+    var yourId = Math.floor(Math.random()*1000000000);
+var servers = {'iceServers': [{'urls': 'stun:stun.services.mozilla.com'}, {'urls': 'stun:stun.l.google.com:19302'}, {'urls': 'turn:numb.viagenie.ca','credential': 'webrtc','username': 'websitebeaver@mail.com'}]};
     var firebase = require('firebase');
     const firebaseConfig = {
     
-        apiKey: "AIzaSyAR8bAOpBYHJwJMZ39gMgvuZgsgFf1M8f8",
-        authDomain: "studybuddies-99115.firebaseapp.com",
-        databaseURL: "https://studybuddies-99115.firebaseio.com",
-        projectId: "studybuddies-99115",
-        storageBucket: "studybuddies-99115.appspot.com",
-        messagingSenderId: "32121492623",
-        appId: "1:32121492623:web:a0d1cf11d163079ddfccfa",
-        measurementId: "G-228FFW8HMV"
+        apiKey: "AIzaSyAGw-B8kOlJXzuOITmkbunYB2zlEJkI1tU",
+        authDomain: "knightstudy-a9976.firebaseapp.com",
+        databaseURL: "https://knightstudy-a9976.firebaseio.com",
+        projectId: "knightstudy-a9976",
+        storageBucket: "knightstudy-a9976.appspot.com",
+        messagingSenderId: "90619046772",
+        appId: "1:90619046772:web:ac404cb50c6e04d074da21",
+        measurementId: "G-ZKFNJF5DXC"
       };
       firebase.initializeApp(firebaseConfig);
       var db = firebase.firestore();
-      for (var i = 0; i < 50; i++)
+      const configuration = {
+        iceServers: [
+          {
+            urls: [
+              'stun:stun1.l.google.com:19302',
+              'stun:stun2.l.google.com:19302',
+            ],
+          },
+        ],
+        iceCandidatePoolSize: 10,
+      };
+      console.log('Create PeerConnection with configuration: ', configuration);
+      var peerConnection = new RTCPeerConnection(configuration);
+    
+     /* for (var i = 0; i < 50; i++)
       {
         db.collection("users").add({
             textMessage : "New Message #:" +i,
@@ -46,7 +62,7 @@ function VideoChat ()
         .catch(function(error) {
             console.error("Error adding document: ", error);
         });
-      }
+      }*/
       var numAdded=0;
       var j=0;
       db.collection("users")
@@ -57,6 +73,8 @@ function VideoChat ()
                 var convoDiv = document.getElementById("convoDiv");
                 if(item.textMessage !== undefined)
                 {
+                    if(item.id !== null && item.id !== undefined)
+                    {
                     if(j % 2 == 1)
                     {
                    
@@ -113,32 +131,11 @@ function VideoChat ()
                     j++;
                     }
                 }
+            }
             })
-        });
-            
-
-
-    //mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));
-    // Source Code from Firebase to get the VideoChat working
-    const configuration = {
-        iceServers: [
-          {
-            urls: [
-              'stun:stun1.l.google.com:19302',
-              'stun:stun2.l.google.com:19302',
-            ],
-          },
-        ],
-        iceCandidatePoolSize: 10,
-      };
-
-
-let peerConnection = null;
-let localStream = null;
-let remoteStream = null;
-let roomDialog = null;
-let roomId = null;
-
+        }); 
+        
+        
 function init() {
     window.onclick = function(e)
     {
@@ -148,113 +145,79 @@ function init() {
             console.log("openCamera");
             openUserMedia(e);
         }
-        else if(e.target.id === "hangupBtn")
-        {
-            hangUp();
-        }
-        else if(e.target.id === "createBtn")
-        {
-            createRoom();
-        }
-        else if(e.target.id === "joinBtn")
-        {
-            joinRoom();
-        }
     }
 }
-
+peerConnection.onicecandidate = (event => db.collection("rooms").set(currentInvite)({sender:yourId, ice: event.candidate}).then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+    var currentDoc = db.collection("users").doc(docRef.id);
+    var setID = currentDoc.set({
+      id: docRef.id},
+      {merge: true});
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+})
+)
+peerConnection.onaddstream = function(event)
+{document.getElementById("friendVideo").srcObject = event.stream}
+db.collection("rooms")
+    .onSnapshot(function(snapshot){
+        snapshot.docChanges().forEach(function(change){
+            var item = change.doc.data();
+            if(change.status === "added")
+            {
+                peerConnection.setRemoteDescription(new RTCSessionDescription(item.sdp))
+                peerConnection.addIceCandidate(new RTCIceCandidate(item.ice));
+            }
+        })
+    })
 async function createRoom() {
-  document.querySelector('#createBtn').disabled = true;
-  document.querySelector('#joinBtn').disabled = true;
   const db = firebase.firestore();
-
-  console.log('Create PeerConnection with configuration: ', configuration);
-  peerConnection = new RTCPeerConnection(configuration);
-
-  registerPeerConnectionListeners();
-
-  // Add code for creating a room here
-  
-  // Code for creating room above
-  
-  localStream.getTracks().forEach(track => {
-    peerConnection.addTrack(track, localStream);
-  });
-
-  // Code for creating a room below
-
-  // Code for creating a room above
-
-  // Code for collecting ICE candidates below
-
-  // Code for collecting ICE candidates above
-
-  peerConnection.addEventListener('track', event => {
-    console.log('Got remote track:', event.streams[0]);
-    event.streams[0].getTracks().forEach(track => {
-      console.log('Add a track to the remoteStream:', track);
-      remoteStream.addTrack(track);
-    });
-  });
-
-  // Listening for remote session description below
-
-  // Listening for remote session description above
-
-  // Listen for remote ICE candidates below
-
-  // Listen for remote ICE candidates above
-}
-
-function joinRoom() {
-  document.querySelector('#createBtn').disabled = true;
-  document.querySelector('#joinBtn').disabled = true;
-
-  document.querySelector('#confirmJoinBtn').
-      addEventListener('click', async () => {
-        roomId = document.querySelector('#room-id').value;
-        console.log('Join room: ', roomId);
-        document.querySelector(
-            '#currentRoom').innerText = `Current room is ${roomId} - You are the callee!`;
-        await joinRoomById(roomId);
-      }, {once: true});
-  roomDialog.open();
-}
-
-async function joinRoomById(roomId) {
-  const db = firebase.firestore();
-  const roomRef = db.collection('rooms').doc(`${roomId}`);
-  const roomSnapshot = await roomRef.get();
-  console.log('Got room:', roomSnapshot.exists);
-
-  if (roomSnapshot.exists) {
-    console.log('Create PeerConnection with configuration: ', configuration);
-    peerConnection = new RTCPeerConnection(configuration);
-    registerPeerConnectionListeners();
-    localStream.getTracks().forEach(track => {
-      peerConnection.addTrack(track, localStream);
-    });
-
-    // Code for collecting ICE candidates below
-
-    // Code for collecting ICE candidates above
-
-    peerConnection.addEventListener('track', event => {
-      console.log('Got remote track:', event.streams[0]);
-      event.streams[0].getTracks().forEach(track => {
-        console.log('Add a track to the remoteStream:', track);
-        remoteStream.addTrack(track);
-      });
-    });
-
-    // Code for creating SDP answer below
-
-    // Code for creating SDP answer above
-
-    // Listening for remote ICE candidates below
-
-    // Listening for remote ICE candidates above
+  sendMessage(yourId, "come Join");
+  function sendMessage(sendId, data)
+  {
+      peerConnection.createOffer()
+        .then(offer => peerConnection.setLocalDescription(offer));
+      db.collection("rooms").add({ sender: sendId, message:data, sdp: peerConnection.localDescription}).then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+        var currentDoc = db.collection("users").doc(docRef.id);
+        currentInvite = currentDoc;
+        var setID = currentDoc.set({
+          id: docRef.id},
+          {merge: true});
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    })
   }
+
+  function readMessage(data) {
+    var msg = JSON.parse(data.val().message);
+    var sender = data.val().sender;
+    if (sender != yourId) {
+    if (msg.ice != undefined)
+    peerConnection.addIceCandidate(new RTCIceCandidate(msg.ice));
+    else if (msg.sdp.type == "offer")
+    peerConnection.setRemoteDescription(new RTCSessionDescription(msg.sdp))
+    .then(() => peerConnection.createAnswer())
+    .then(answer => peerConnection.setLocalDescription(answer))
+    .then(() => sendMessage(yourId, JSON.stringify({'sdp': peerConnection.localDescription})));
+    else if (msg.sdp.type == "answer")
+    peerConnection.setRemoteDescription(new RTCSessionDescription(msg.sdp));
+    }
+   };
+   function showMyFace() {
+    navigator.mediaDevices.getUserMedia({audio:true, video:true})
+    .then(stream => document.getElementById("video").srcObject = stream)
+    .then(stream => peerConnection.addStream(stream));
+   }
+   
+   function showFriendsFace() {
+    peerConnection.createOffer()
+    .then(offer => peerConnection.setLocalDescription(offer) )
+    .then(() => sendMessage(yourId, JSON.stringify({'sdp': peerConnection.localDescription})) );
+   }
+  registerPeerConnectionListeners();
 }
 
 async function openUserMedia(e) {
@@ -281,70 +244,41 @@ if ('srcObject' in video) {
   
   console.log(video);
 }
-
-
-
-
-  /*const stream = await navigator.mediaDevices.getUserMedia(
-      {video: true, audio: true});
-      var video = document.getElementById("localVideo");
-      console.log(video, "Video ");
-      video.srcObject = stream;
-      video.onload = function(e)
-      {
-          video.play();
-      }
-  //document.querySelector('#localVideo').srcObject = stream;
-  localStream = stream;
-  remoteStream = new MediaStream();
-  //document.querySelector('#remoteVideo').srcObject = remoteStream;
-
-  console.log('Stream:', document.getElementById("localVideo").srcObject);
-  document.getElementById("cameraBtn")
-  /*document.querySelector('#cameraBtn').disabled = true;
-  document.querySelector('#joinBtn').disabled = false;
-  document.querySelector('#createBtn').disabled = false;
-  document.querySelector('#hangupBtn').disabled = false;*/
+}
+window.onchange= function(e)
+{
+    console.log(document.getElementById("textInput").value);
+    db.collection("users").add({
+        textMessage : document.getElementById("textInput").value
+    })
+    .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+        var currentDoc = db.collection("users").doc(docRef.id);
+        var setID = currentDoc.set({
+          id: docRef.id},
+          {merge: true});
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
 }
 
-async function hangUp(e) {
-  const tracks = document.querySelector('#localVideo').srcObject.getTracks();
-  tracks.forEach(track => {
-    track.stop();
-  });
-
-  if (remoteStream) {
-    remoteStream.getTracks().forEach(track => track.stop());
-  }
-
-  if (peerConnection) {
-    peerConnection.close();
-  }
-
-  document.querySelector('#localVideo').srcObject = null;
-  document.querySelector('#remoteVideo').srcObject = null;
-  document.querySelector('#cameraBtn').disabled = false;
-  document.querySelector('#joinBtn').disabled = true;
-  document.querySelector('#createBtn').disabled = true;
-  document.querySelector('#hangupBtn').disabled = true;
-  document.querySelector('#currentRoom').innerText = '';
-
-  // Delete room on hangup
-  if (roomId) {
-    const db = firebase.firestore();
-    const roomRef = db.collection('rooms').doc(roomId);
-    const calleeCandidates = await roomRef.collection('calleeCandidates').get();
-    calleeCandidates.forEach(async candidate => {
-      await candidate.delete();
+function submitHandler(e)
+{
+    console.log(document.getElementById("textInput").value);
+    db.collection("users").add({
+        textMessage : document.getElementById("textInput").value
+    })
+    .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+        var currentDoc = db.collection("users").doc(docRef.id);
+        var setID = currentDoc.set({
+          id: docRef.id},
+          {merge: true});
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
     });
-    const callerCandidates = await roomRef.collection('callerCandidates').get();
-    callerCandidates.forEach(async candidate => {
-      await candidate.delete();
-    });
-    await roomRef.delete();
-  }
-
-  document.location.reload(true);
 }
 
 function registerPeerConnectionListeners() {
@@ -372,18 +306,17 @@ init();
        
     <div>
         <div id="container">
-	<video autoplay="true" id="videoElement">
-	
-	</video>
+	<video autoplay="true" id="videoElement"/>
+	<video autoplay="true" id="friendVideo"/>
     </div>
         <div id="convo">
         <div id="convoDiv"></div>
         </div>
         <div id="videoButtons">
             <div className="videoBtn" id="leaveCall"> Leave Call </div>
-            <div className="videoBtn"  id="findNewBuddy"> Find New Buddy </div>
+            <div className="videoBtn"  id="findNewBuddy" onClick={createRoom}> Find New Buddy </div>
         </div>
-        <div className="videoBtn" id="toggleCall"> Enter Call </div>
+        <div className="videoBtn" id="toggleCall" onClick={(e) => {this.handleChange(e)}}> Enter Call </div>
         <div id="videos"></div>
             <div id="titleBar">
             <img id ="titleBar"  src={titleBar}></img>
@@ -391,10 +324,10 @@ init();
             <div id="divider"></div>
             <div id="messageContainer">
             <div id="messageDiv2">
-                <input type="text" id="textInput"></input>
+                <input type="text" id="textInput" onSubmit={submitHandler}></input>
             </div>
             </div>
-            <div id="submit"> Submit
+            <div id="submit" onChange={(e) => {this.handleChange(e)}} onClick={submitHandler}> Submit
 
             </div>
            </div>

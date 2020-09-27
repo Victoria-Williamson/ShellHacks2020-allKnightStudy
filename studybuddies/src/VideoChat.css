@@ -136,6 +136,10 @@ background-color: white;
     border:none;
     margin-left: 5px;
     margin-right: 5px;
+    font-size: x-large;
+    font-family: Roboto;
+    font-weight: bolder;
+    color: grey;
     overflow: auto;
 }
 #submit {
