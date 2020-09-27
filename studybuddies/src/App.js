@@ -58,115 +58,7 @@ function App() {
     appId: "1:32121492623:web:a0d1cf11d163079ddfccfa",
     measurementId: "G-228FFW8HMV"
   };
-
-  /*
-  var user;
-    // Needed to push to cloude firestore !!!!
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-      db.collection("users").add({
-        email: "something@google.com",
-        lookingFor: "friend",
-        major: "Computer Science",
-        password: "1235334q32",
-        school:"UCF",
-        status:"online",
-        userName:"ucf111",
-    })
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
-        var currentDoc = db.collection("users").doc(docRef.id);
-        var setID = currentDoc.set({
-          id: docRef.id},
-          {merge: true});
-
-        user = new User(docRef.id,"something@google.com","friend", "Computer Science","1235334q32","img","UCF", "online", "ucf111");
-        console.log(user);
-    })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
-    });
-
-    //load profile: when click "my profile"
-    const loadButton = document.querySelector("#loadButton");
-    
-    loadButton.addEventListener("click", function() {
-      docRef.get().then(function (doc){
-        if(doc && doc.exists){
-          const userInfo = doc.data();
-          userNameOut.innerText = "UserName: " + userInfo.userName;
-          idOut.innerText = "ID: " + userInfo.id;
-          passwordOut.innerText = "Password " + userInfo.password;
-          emailOut.innerText = "Email: " + userInfo.email;
-          schoolOut.innerText = "School: " + userInfo.school;
-          majorOut.innerText = "Major: " + userInfo.Major;
-          statusOut.innerText = "Status: " + userInfo.status;
-        }
-      }).catch(function (error){
-        console.log("Error loading profile: ", error);
-      });
-    });
-
-    // get real time update after changing the file: after editing the profile
-    getRealTimeUpdates = function(){
-      docRef.onSnapshot(function (doc){
-        if(doc && doc.exists){
-          const userInfo = doc.data();
-          userNameOut.innerText = "UserName: " + userInfo.userName;
-          idOut.innerText = "ID: " + userInfo.id;
-          passwordOut.innerText = "Password " + userInfo.password;
-          emailOut.innerText = "Email: " + userInfo.email;
-          schoolOut.innerText = "School: " + userInfo.school;
-          majorOut.innerText = "Major: " + userInfo.Major;
-          statusOut.innerText = "Status: " + userInfo.status;
-        }
-      });
-    };
-    getRealTimeUpdates();
-
-    //edit profile
-
-
-
-
-      
-    */
-
-    // Initialize the FirebaseUI Widget using Firebase.
-    
-    var ui = new firebaseui.auth.AuthUI(firebase.auth());
-    
-      var uiConfig = {
-        callbacks: {
-          signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-            // User successfully signed in.
-            // Return type determines whether we continue the redirect automatically
-            // or whether we leave that to developer to handle.
-            return true;
-          },
-          uiShown: function() {
-            // The widget is rendered.
-            // Hide the loader.
-            document.getElementById('loader').style.display = 'none';
-          }
-        },
-        // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-        signInFlow: 'popup',
-        signInSuccessUrl: '<url-to-redirect-to-on-success>',
-        signInOptions: [
-          // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-          firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-          firebase.auth.GithubAuthProvider.PROVIDER_ID,
-          firebase.auth.EmailAuthProvider.PROVIDER_ID,
-          firebase.auth.PhoneAuthProvider.PROVIDER_ID
-        ],
-        // Terms of service url.
-        tosUrl: '<your-tos-url>',
-        // Privacy policy url.
-        privacyPolicyUrl: '<your-privacy-policy-url>'
-      };  
+  firebase.initializeApp(firebaseConfig);
 
       firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
@@ -187,8 +79,6 @@ function App() {
   
       });
 
-      
-        
          function GoogleSignIn()
          {
           var provider = new firebase.auth.GoogleAuthProvider();
