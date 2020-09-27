@@ -1,5 +1,11 @@
 # ShellHacks2020-allKnightStudy
 
+Created by Victoria Williamson (vicwill01@knights.ucf.edu), Weiyi Chen (cwy.sophiechen@knight.ucf.edu) and Michaela Catherine Green (mcgreen417@gmail.com)
+
+# To launch the page
+Open terminal and type in npm install
+type in npm start
+
 #Currenntly A work in progress !! ( Hopefully will be completed within the first two weeks of October 2020)
 
 The goal of this application is to create a new web application that can give users a temporary study buddy to safely make new friends over quarantine. This applicaiton is not fully funcitoning yet, but will hopefully be done soon. Currently we are working on creating a sign in process and way of connecting study buddies with each other through their accounts. Once an account is created the studybuddies will be able to connet with other people and via. video chat and chat box. 
