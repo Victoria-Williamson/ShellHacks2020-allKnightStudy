@@ -58,14 +58,14 @@
 #authLogos {
   position: absolute;
   top:40%;;
-  left:90%;
+  left:70%;
   transform: translate(-25%, -25%);
 }
 #txt4 {
   text-align: justify;
   position: absolute;
   font-size: 30px;
-  left:70%;
+  left:65%;
   top:25%;
   width:400px;
   font-style: "Roboto";
@@ -152,7 +152,7 @@
 #text3{
   position: absolute;
   top:550px;
-  left: -550px;
+  left: -380px;
   text-align: justify;
 }
 #text2 {
