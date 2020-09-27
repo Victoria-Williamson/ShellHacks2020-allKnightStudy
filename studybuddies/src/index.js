@@ -5,11 +5,21 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import HomePage from "./HomePage";
 import VideoChat from "./VideoChat";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-   <App/>
+   <BrowserRouter>
+        <div>
+            <Switch>
+             <Route path="/" component={App} exact/>
+             <Route path="/HomePage" component={HomePage}/>
+             <Route path="/VideoChat" component={VideoChat}/>
+            <Route component={Error}/>
+           </Switch>
+        </div> 
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
