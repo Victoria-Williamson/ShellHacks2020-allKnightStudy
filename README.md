@@ -1,4 +1,4 @@
-# Created by Victoria Williamson (vicwill01@knights.ucf.edu), Weiyi Chen (cwy.sophiechen@gmail.com) and Michaela Catherine Green (mcgreen417@gmail.com)
+Created by Victoria Williamson (vicwill01@knights.ucf.edu), Weiyi Chen (cwy.sophiechen@knight.ucf.com) and Michaela Catherine Green (mcgreen417@gmail.com)
 
 # ShellHacks2020-allKnightStudy
 instructions :
