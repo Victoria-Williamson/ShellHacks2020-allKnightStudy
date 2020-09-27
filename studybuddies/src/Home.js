@@ -3,7 +3,7 @@ import "./Home.css";
 import divider from "./img/divider-line.png";
 import titleBar from "./title-bar.png";
 
-function Home {}
+function Home ()
 {
     return (
         <div>
@@ -21,11 +21,12 @@ function Home {}
             <div id="book-party"/>
             <div id="avatar1"/>
             <div id="change_arrow"/>
+            <div id="home_red_username"/>
             <div id="home_grey_username"/>
             <div id="change"/>
             <div id="home_right_arrow"/>
             <div id="home_email_address"/>
-            <div id="something@example.com"/>
+            <div id="something-example.com"/>
             <div id="change"/>
             <div id="home_right_arrow"/>
             <div id="home_Rectangle"/>
@@ -36,13 +37,13 @@ function Home {}
             <div id="home_right_arrow"/>
             <div id="horizontal_line"/>
             <div id="mostrecentbuddy"/>
-            <div id="avatar1"/>
-            <div id="home_black_username"/>
-            <div id="view_profile"/>
             <div id="avatar2"/>
             <div id="home_black_username"/>
             <div id="view_profile"/>
             <div id="avatar3"/>
+            <div id="home_black_username"/>
+            <div id="view_profile"/>
+            <div id="avatar4"/>
             <div id="home_black_username"/>
             <div id="view_profile"/>
             <div id="logout"/>
