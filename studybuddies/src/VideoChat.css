@@ -28,6 +28,12 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 50px;
 
 }
+.sendText{
+    left:300px;
+}
+.sendtext{
+    color:  #EB5757;
+}
 #toggleCall{
     top:750px;
     left: 17%;
@@ -95,8 +101,85 @@ body {
     margin: 0;
     padding: 0;
 }
+
+#textMessage{
+    margin-top: 10px;
+    z-index: -10px;
+    position: absolute;
+}
+#messageContainer{
+position: absolute;
+width:550px;
+bottom: 10px;
+height:100px;
+right:60px;
+background-color: #eb575775 ;;
+}
+#messageDiv2 {
+    position: absolute;
+width:520px;
+height: 70px;
+margin-top: 15px;
+left:50%;
+transform: translate(-50%, 0%);
+background-color: white;
+}
+#messageDiv{
+    position: absolute;
+    left:80px;
+}
+#textInput{
+    height: 100%;
+    width: 100%;
+    outline-style: none;
+    border-width:0px;
+    border:none;
+    margin-left: 5px;
+    margin-right: 5px;
+    overflow: auto;
+}
+#submit {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+    width: 200px;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+    background: #EB5757;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px;
+}
+#text{
+    z-index: 10px;
+    position: absolute;
+    width: 300px;
+    color:whitesmoke;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
 #convo {
-    background-color: #EB5757 ;
+    background-color: #eb575775 ;
+    position: absolute;
+    height:700px;
+    right:3%;
+    top:100px;
+    width:550px;
+}
+#convoDiv {
+    background-color: white;
+    position: absolute;
+    height:680px;
+    right:3%;
+    top:50%;
+    left:50%;
+    width:530px;
+    transform: translate(-50%, -50%);
+    overflow: auto;
 }
 #message {
     background: white;

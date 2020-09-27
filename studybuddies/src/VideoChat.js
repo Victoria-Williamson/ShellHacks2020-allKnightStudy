@@ -2,12 +2,121 @@ import React from 'react';
 import "./VideoChat.css";
 import divider from "./img/divider-line.png";
 import titleBar from "./authImages/title-bar.png";
-import person1 from "./videoImgs/Component5.png";
-import person2 from "./videoImgs/Component4.png";
+import receiveText from "./videoImgs/Union-3.png";
+import sendText from "./videoImgs/Union-4.png";
 var firebase = require('firebase'); // Needed whenever using firestore !!
 
 function VideoChat ()
 {
+    class TextMessage{
+        TextMessage(message,userid,date)
+        {
+            this.message = message;
+            this.userid = userid;
+            this.date = date;
+        }
+    }
+
+    var firebase = require('firebase');
+    const firebaseConfig = {
+    
+        apiKey: "AIzaSyAR8bAOpBYHJwJMZ39gMgvuZgsgFf1M8f8",
+        authDomain: "studybuddies-99115.firebaseapp.com",
+        databaseURL: "https://studybuddies-99115.firebaseio.com",
+        projectId: "studybuddies-99115",
+        storageBucket: "studybuddies-99115.appspot.com",
+        messagingSenderId: "32121492623",
+        appId: "1:32121492623:web:a0d1cf11d163079ddfccfa",
+        measurementId: "G-228FFW8HMV"
+      };
+      firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
+      for (var i = 0; i < 50; i++)
+      {
+        db.collection("users").add({
+            textMessage : "New Message #:" +i,
+        })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+            var currentDoc = db.collection("users").doc(docRef.id);
+            var setID = currentDoc.set({
+              id: docRef.id},
+              {merge: true});
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+      }
+      var numAdded=0;
+      var j=0;
+      db.collection("users")
+        .onSnapshot(function(snapshot){
+            snapshot.docChanges().forEach(function(change){
+                var item = change.doc.data();
+                console.log(item);
+                var convoDiv = document.getElementById("convoDiv");
+                if(item.textMessage !== undefined)
+                {
+                    if(j % 2 == 1)
+                    {
+                   
+                    var newItemDiv = document.createElement("div");
+                    newItemDiv.setAttribute("id", "messageDiv");
+                    newItemDiv.style.marginTop = numAdded + "px";
+                    var textMessage = document.createElement("img");
+                    textMessage.setAttribute("src", receiveText);
+                    
+                    textMessage.innerHTML = item.textMessage;
+                    textMessage.setAttribute("id", "textMessage");
+                    console.log(textMessage.style.marginTop);
+                    
+                    console.log(textMessage.style.marginTop);
+                    var text = document.createElement("h1");
+                    text.innerHTML = item.textMessage;
+                    text.setAttribute("id", "text")
+                    numAdded += 100;
+                    newItemDiv.appendChild(textMessage);
+                    newItemDiv.appendChild(text);
+
+                    var container = document.getElementById("convoDiv");
+                    convoDiv.appendChild(newItemDiv);
+                    j++;
+                    }
+
+                    else
+                    {
+                    console.log("yes")
+                    var newItemDiv = document.createElement("div");
+                    newItemDiv.setAttribute("id", "messageDiv");
+                    newItemDiv.style.marginTop = numAdded + "px";
+                    var textMessage = document.createElement("img");
+                    textMessage.setAttribute("src", sendText);
+                    
+                    textMessage.innerHTML = item.textMessage;
+                    textMessage.setAttribute("id", "textMessage");
+                    textMessage.setAttribute("className", "sendText");
+                    textMessage.style.marginRight="200px";
+                    console.log(textMessage.style.marginTop);
+                    
+                    console.log(textMessage.style.marginTop);
+                    var text = document.createElement("h1");
+                    text.innerHTML = item.textMessage;
+                    text.setAttribute("id", "text")
+                    text.setAttribute("className", "sendtext");
+                    numAdded += 100;
+                    text.style.color = "#eb575775";
+                    newItemDiv.appendChild(textMessage);
+                    newItemDiv.appendChild(text);
+
+                    var container = document.getElementById("convoDiv");
+                    convoDiv.appendChild(newItemDiv);
+                    j++;
+                    }
+                }
+            })
+        });
+            
+
 
     //mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));
     // Source Code from Firebase to get the VideoChat working
@@ -268,7 +377,7 @@ init();
 	</video>
     </div>
         <div id="convo">
-
+        <div id="convoDiv"></div>
         </div>
         <div id="videoButtons">
             <div className="videoBtn" id="leaveCall"> Leave Call </div>
@@ -280,6 +389,14 @@ init();
             <img id ="titleBar"  src={titleBar}></img>
             </div>
             <div id="divider"></div>
+            <div id="messageContainer">
+            <div id="messageDiv2">
+                <input type="text" id="textInput"></input>
+            </div>
+            </div>
+            <div id="submit"> Submit
+
+            </div>
            </div>
     
     );
