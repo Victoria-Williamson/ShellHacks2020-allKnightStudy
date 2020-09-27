@@ -7,15 +7,15 @@ import facebookLogo from "./authImages/Facebook.png";
 import googleLogo from "./authImages/Google.png";
 import twiiterLogo from "./authImages/Twitter.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button} from 'react-bootstrap';
 import titleBar from "./authImages/title-bar.png";
-import dividerLine from "./authImages/divider-line.png"
-import topRowImg from "./authImages/topImage.png";
-import middleRowImg from "./authImages/middleImage.png";
-import leftRowImg from "./authImages/bottomImage.png";
-import text1 from "./images/text1.png";
-import text2 from "./images/text2.png";
-import text3 from "./images/text3.png";
+import mainImg1 from "./img/mainPage1.png";
+import mainImg2 from "./img/mainPage2.png";
+import mainImg3 from "./img/mainPage3.png";
+import divider from "./img/divider-line.png";
+import HomePage from "./HomePage";
+import VideoChat from "./VideoChat";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {Form, Forms} from 'react-bootstrap';
 var firebase = require('firebase'); // Needed whenever using firestore !!
 var firebaseui = require('firebaseui');
 
@@ -145,36 +145,35 @@ function App() {
   
       });
 
-      window.onclick = function(e)
-      {
-        // Allows Google Sign in 
-        if (e.target.id="Google")
-          {
-            var provider = new firebase.auth.GoogleAuthProvider();
-            provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-            firebase.auth().languageCode = 'eng';
-            firebase.auth().signInWithRedirect(provider);
-            firebase.auth().getRedirectResult().then(function(result) {
-              if (result.credential) {
-                // This gives you a Google Access Token. You can use it to access the Google API.
-                var token = result.credential.accessToken;
-                // ...
-              }
-              // The signed-in user info.
-              var user = result.user;
-            }).catch(function(error) {
-              // Handle Errors here.
-              var errorCode = error.code;
-              var errorMessage = error.message;
-              // The email of the user's account used.
-              var email = error.email;
-              // The firebase.auth.AuthCredential type that was used.
-              var credential = error.credential;
+      
+        
+         function GoogleSignIn()
+         {
+          var provider = new firebase.auth.GoogleAuthProvider();
+          provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+          firebase.auth().languageCode = 'eng';
+          firebase.auth().signInWithRedirect(provider);
+          firebase.auth().getRedirectResult().then(function(result) {
+            if (result.credential) {
+              // This gives you a Google Access Token. You can use it to access the Google API.
+              var token = result.credential.accessToken;
               // ...
-            });
-          }
-         // Allows Twitter Sign in
-         else if(e.target.id="Twitter")
+            }
+            // The signed-in user info.
+            var user = result.user;
+          }).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+          });
+         }
+
+         function TwitterSignIn()
          {
           var provider = new firebase.auth.TwitterAuthProvider();
           firebase.auth().languageCode = 'eng';
@@ -200,8 +199,8 @@ function App() {
             // ...
           });
          }
-         
-         else if(e.target.id="Facebook")
+
+         function FacebookSignIn()
          {
           var provider = new firebase.auth.FacebookAuthProvider();
           provider.addScope('user_email');
@@ -224,113 +223,73 @@ function App() {
             var credential = error.credential;
             // ...
           });
+         
          }
-         else if(e.target.id="Email")
-         {
-           console.log('email');
-         }
-      }
-     
-
-      
-      
-      /*
-       <div id="tabBar">
-        <div id="websiteSymbol"> *insert symbol* </div>
-        <div classNameName="tabButton" id="tab1" href="#"> Tab 1</div>
-        <div classNameName="tabButton" id="tab2" href="#"> Tab 2</div>
-        <div classNameName="tabButton" id="tab3" href="#"> Tab 3</div>
-        <div classNameName="tabButton" id="tab4" href="#"> Tab 4</div>
-        <div classNameName="tabButton" id="tab5" href="#"> Tab 5</div>
-      </div>
-      <div classNameName="auth" id="authentication">
-        <div id="toggleLogin">
-          Log In
-        </div>
-        <div classNameName="auth" id="signUp">
-          Sign Up
-        </div>
-        */
-       /* 
-       <div className="container-fluid">
-        <div className="row">
-            <div className="col-md-12" padding-top="0.5" text-align="center">
-                <img src="img/title-bar.png" className="title-bar"/>
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-md-6"> 
-                <div className="row">
-                    <div className="col-md-1"><img src={topRowImg} className="doodles"/></div>
-                    <div className="col-md-11">
-                        <img className="webtext-24"margin-top="10%" margin-left="40%" src={text1}/>
-                    </div>
-                </div>
-                <div className="row" margin-top= "-25%;">
-                    <div className="col-md-11">
-                        <img className="webtext-24" margin-top="7.5%" margin-left="5%" margin-right="35%" src={text2} />
-                    <div className="col-md-1"><img src={middleRowImg} className="doodles" float = "right"/></div>
-                </div>
-                <div className="row" margin-top= "-25%">
-                    <div className="col-md-1"><img src={leftRowImg} className="doodles"/></div>
-                    <div className="col-md-11">
-                        <img className="webtext-24" margin-top="7.5%" margin-left="40%" src={text3}/>
-                    </div>
-                </div>
-            </div>
-            <div className="col-md-6">
-                <img src="img/divider-line.png" className="divider-line"/>
-            </div>
-        </div>
-    </div>
-    */
   return (
     <div classNameName="App">
       <div className="container-fluid">
         <div className="row">
-            <div className="col-md-12" padding-top="0.5" text-align="center">
-                <img src="img/title-bar.png" className="title-bar"/>
-            </div>
         </div>
         <div className="row">
             <div className="col-md-6"> 
                 <div className="row">
-                    <div className="col-md-1"><img src={topRowImg} className="doodles"/></div>
+                <div className="col-md-1" id="img1"><img src={mainImg1} className="doodles"  height = "225px"float = "right"/></div>
                     <div className="col-md-11">
-                        <img className="webtext-24"margin-top="10%" margin-left="40%" src={text1}/>
+                        <p className="webtext-24"margin-top="10%" margin-left="40%" id="text1"> Quarantine got you down? Tired of studying on your own? Let us find you a study buddy! Our service is perfect for those extroverts that just love having someone by their side while they’re hitting the books.</p>
                     </div>
                 </div>
                 <div className="row" margin-top= "-25%;">
                     <div className="col-md-11">
                         <p id="text2" className="webtext-24" margin-top="7.5%" margin-left="5%" id="text2" margin-right="35%"> Select your major, fill out a bio, and choose the amount of time you’d like to study. We’ll automatically search through our users and display study buddy matches for you. Select a buddy and get to studying!</p>
-                    <div className="col-md-1" id="img2"><img src={middleRowImg} className="doodles"  height = "250px"float = "right"/></div>
+                    <div className="col-md-1" id="img2"><img src={mainImg2} className="doodles"  height = "225px"float = "right"/></div>
                 </div>
                 <div className="row" margin-top= "-25%">
-                    <div className="col-md-1"><img src={leftRowImg} className="doodles"/></div>
+                    <div className="col-md-1" id="img3"><img src={mainImg3} height="225px" className="doodles" /></div>
                     <div className="col-md-11">
-                        <img className="webtext-24" margin-top="7.5%" margin-left="40%" src={text3}/>
+                        <p id="text3" className="webtext-24" margin-top="7.5%" margin-left="40%"> Turn on your webcam and say hi to your new study buddy! Feel free to chat while you’re studying and maybe you’ll even walk away from your study session with a new friend. Our service is perfect adding accountability into your studying session.</p>
                     </div>
                 </div>
             </div>
-            <div className="col-md-6">
-                <img src="img/divider-line.png" className="divider-line"/>
-            </div>
+           
         </div>
     </div>
+    <div id="dividet">
+                <img id="divide" src={divider}/>
+            </div>
     </div>
+    <div id="txt4"> Ready to find yourself a study buddy? Sign up for allKnight Study today!</div>
       <div id="titleBar">
-        <img id ="titleBar" src={titleBar}></img>
+        <img id ="titleBar"  src={titleBar}></img>
       </div>
       <div id="authLogos">
-      <div id="Google">
-      <img classNameName="authLogo" src={googleLogo}></img>
+      <div>
+      <img id="Google" onClick={GoogleSignIn} classNameName="authLogo" src={googleLogo}></img>
       </div>
-      <div classNameName="authLogo" id="Twitter">
-      <img src={twiiterLogo}></img>
+      <div classNameName="authLogo">
+      <img  id="Twitter" onClick={TwitterSignIn} src={twiiterLogo}></img>
       </div>
-     <div classNameName="authLogo" id="Facebook">
-       <img src={facebookLogo}></img>
+     <div classNameName="authLogo">
+       <img  id="Facebook" onClick={FacebookSignIn} src={facebookLogo}></img>
      </div>
+     </div>
+     <div id="Forms">
+       <Form>
+       <Form.Group controlId="formBasicEmail">
+    <Form.Label>Email address</Form.Label>
+    <Form.Control type="email" placeholder="Enter email" />
+    <Form.Text className="text-muted">
+      We'll never share your email with anyone else.
+    </Form.Text>
+  </Form.Group>
+
+  <Form.Group controlId="formBasicPassword">
+    <Form.Label>Password</Form.Label>
+    <Form.Control type="password" placeholder="Password" />
+  </Form.Group>
+  <Form.Group controlId="formBasicCheckbox">
+    <Form.Check type="checkbox" label="Check me out" />
+  </Form.Group>
+       </Form>
      </div>
      </div>
   );

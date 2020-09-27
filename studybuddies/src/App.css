@@ -57,8 +57,19 @@
 }
 #authLogos {
   position: absolute;
-  top:20px;
-  left:20px;
+  top:40%;;
+  left:73%;
+  transform: translate(-25%, -25%);
+}
+#txt4 {
+  text-align: justify;
+  position: absolute;
+  font-size: 30px;
+  left:75%;
+  top:25%;
+  width:400px;
+  font-style: "Roboto";
+  transform: translate(-25%, -25%);
 }
 .topgraphicImg{
   position: absolute;
@@ -84,6 +95,13 @@
   font-weight: bolder;
   color: whitesmoke;
 }
+#Forms {
+  position: absolute;
+  width:500px;
+  left: 85%;
+  top:60%;
+  transform: translate(-75%, -50%);
+}
 #titleBar {
   top:0px;
   margin-top: 10px;
@@ -97,12 +115,50 @@
 	max-height: 50%;
   width: auto;
 }
+#img1 {
+  position: absolute;
+  margin-top: 80px;
+  left:10px;
+  z-index: 10;
+}
+#titleBar {
+  position:absolute;
+  top: 10px;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+#text1{
+  position: absolute;
+  left: 260px;
+  margin-top: 125px;
+  text-align: justify;
+}
 #img2{
-  left:400px;
+  top: 280px;
+  position: absolute;
+  left:450px;
+}
+#divide {
+  position:absolute;
+  margin-left: 10px;
+  left:50%;
+  transform: translate(50%, 0%ß);
+}
+#img3{
+  top: 500px;
+  position: absolute;
+  left:0px;
+}
+#text3{
+  position: absolute;
+  top:550px;
+  left: -550px;
+  text-align: justify;
 }
 #text2 {
+  position: absolute;
+  top:300px;
   left: 30px;
-  top: 20%;
   text-align: justify;
 }
 .webtext-24 {
