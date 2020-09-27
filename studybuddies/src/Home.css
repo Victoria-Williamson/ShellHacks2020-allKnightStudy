@@ -38,3 +38,1607 @@ align-items: center;
 color: #4F4F4F;
 
 }
+
+#how_long_to_study {
+    /* How long would you like to study for? */
+
+position: absolute;
+width: 352px;
+height: 45px;
+left: 138px;
+top: 326px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* Gray 3 */
+color: #828282;
+
+}
+
+#study_time_bar {
+    /* btn-group */
+
+position: absolute;
+width: 342px;
+height: 64px;
+left: 138px;
+top: 371px;
+
+
+
+/* btn-secondary */
+
+position: absolute;
+width: 87.09px;
+height: 64px;
+left: 138px;
+top: 371px;
+
+
+
+/* BG */
+
+position: absolute;
+width: 87.09px;
+height: 64px;
+left: 138px;
+top: 371px;
+
+background: #EB5757;
+border: 1px solid #EB5757;
+box-sizing: border-box;
+border-radius: 4px;
+
+
+/* 8:16:8:16 */
+
+position: absolute;
+width: 61px;
+height: 19px;
+left: 151px;
+top: 393px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 21px;
+/* or 131% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* btn-secondary copy */
+
+position: absolute;
+width: 87.09px;
+height: 64px;
+left: 222.97px;
+top: 371px;
+
+
+
+/* BG */
+
+position: absolute;
+width: 87.09px;
+height: 64px;
+left: 222.97px;
+top: 371px;
+
+background: #FFFFFF;
+border: 1px solid #CCCCCC;
+box-sizing: border-box;
+
+
+/* 8:16:8:16 */
+
+position: absolute;
+width: 61px;
+height: 19px;
+left: 236px;
+top: 393px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 21px;
+/* or 131% */
+text-align: center;
+
+color: #373A3C;
+
+
+
+/* btn-secondary copy 3 */
+
+position: absolute;
+width: 87.09px;
+height: 64px;
+left: 307.94px;
+top: 371px;
+
+
+
+/* BG */
+
+position: absolute;
+width: 87.09px;
+height: 64px;
+left: 307.94px;
+top: 371px;
+
+background: #FFFFFF;
+border: 1px solid #CCCCCC;
+box-sizing: border-box;
+
+
+/* 8:16:8:16 */
+
+position: absolute;
+width: 61px;
+height: 19px;
+left: 320px;
+top: 393px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 21px;
+/* or 131% */
+text-align: center;
+
+color: #373A3C;
+
+
+
+/* btn-secondary copy 2 */
+
+position: absolute;
+width: 87.09px;
+height: 64px;
+left: 392.91px;
+top: 371px;
+
+
+
+/* BG */
+
+position: absolute;
+width: 87.09px;
+height: 64px;
+left: 392.91px;
+top: 371px;
+
+background: #FFFFFF;
+border: 1px solid #CCCCCC;
+box-sizing: border-box;
+border-radius: 4px;
+
+
+/* 8:16:8:16 */
+
+position: absolute;
+width: 61px;
+height: 19px;
+left: 405px;
+top: 393px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 21px;
+/* or 131% */
+text-align: center;
+
+color: #373A3C;
+
+}
+
+#major{
+    /* Outlined / Label　♥ / Populated & Inactive */
+
+position: absolute;
+width: 482px;
+height: 84px;
+left: calc(50% - 482px/2 - 341px);
+top: 460px;
+
+border-radius: 50px;
+
+
+/* Background */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 12px;
+
+
+
+/* Cut-out */
+
+position: absolute;
+width: 482px;
+height: 72px;
+left: 0px;
+top: 0px;
+
+/* Light / Error */
+background: #B00020;
+
+
+/* Clipping Bounds */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: #C4C4C4;
+
+
+/* Auto Layout Cut-out */
+
+position: absolute;
+height: 16px;
+left: 8px;
+right: 44px;
+top: 0px;
+
+background: #C4C4C4;
+
+
+/* Outline */
+
+position: absolute;
+width: 482px;
+height: 56px;
+left: 0px;
+top: 8px;
+
+opacity: 0.38;
+/* Gray 2 */
+border: 1px solid #4F4F4F;
+box-sizing: border-box;
+border-radius: 30px;
+
+
+/* Surface / Small Components */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 8px;
+bottom: 8px;
+
+
+
+/* Surface Mask / Small Components */
+
+position: absolute;
+width: 482px;
+height: 56px;
+left: 0px;
+top: 0px;
+
+/* Light / Surface */
+background: #FFFFFF;
+
+
+/* CornerFamily / Rounded | Small Components */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+/* Light / Surface */
+background: #FFFFFF;
+
+
+/* CornerFamily / Cut | Small Components */
+
+position: absolute;
+visibility: hidden;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+
+
+/* Surface Color */
+
+position: absolute;
+visibility: hidden;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+/* Light / On Surface */
+background: #000000;
+
+
+/* 24dp */
+
+position: absolute;
+visibility: hidden;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+
+
+/* Clip Label + Stroke */
+
+/* Auto Layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 0px 4px;
+
+position: absolute;
+height: 16px;
+left: 8px;
+right: 44px;
+top: 0px;
+
+
+
+/* Label + Stroke */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 667px;
+height: 16px;
+left: 4px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+align-self: flex-start;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Label */
+
+position: static;
+width: 191px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 16px;
+/* identical to box height, or 80% */
+display: flex;
+align-items: center;
+letter-spacing: 0.5px;
+
+/* Gray 2 */
+color: #4F4F4F;
+opacity: 0.6;
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+align-self: flex-end;
+flex-grow: 0;
+margin: 4px 0px;
+
+
+/* Stroke Clipping */
+
+position: static;
+width: 472px;
+height: 40px;
+left: 195px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+align-self: flex-start;
+flex-grow: 0;
+margin: 4px 0px;
+
+
+/* Stroke */
+
+position: absolute;
+left: -8px;
+right: -8px;
+top: 8px;
+bottom: -24px;
+
+opacity: 0.38;
+/* Gray 2 */
+border: 1px solid #4F4F4F;
+box-sizing: border-box;
+
+}
+
+#subject {
+    /* Outlined / Label　♥ / Populated & Inactive */
+
+position: absolute;
+width: 482px;
+height: 84px;
+left: calc(50% - 482px/2 - 341px);
+top: 544px;
+
+border-radius: 50px;
+
+
+/* Background */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 12px;
+
+
+
+/* Cut-out */
+
+position: absolute;
+width: 482px;
+height: 72px;
+left: 0px;
+top: 0px;
+
+/* Light / Error */
+background: #B00020;
+
+
+/* Clipping Bounds */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: #C4C4C4;
+
+
+/* Auto Layout Cut-out */
+
+position: absolute;
+height: 16px;
+left: 8px;
+right: 44px;
+top: 0px;
+
+background: #C4C4C4;
+
+
+/* Outline */
+
+position: absolute;
+width: 482px;
+height: 56px;
+left: 0px;
+top: 8px;
+
+opacity: 0.38;
+/* Gray 2 */
+border: 1px solid #4F4F4F;
+box-sizing: border-box;
+border-radius: 30px;
+
+
+/* Surface / Small Components */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 8px;
+bottom: 8px;
+
+
+
+/* Surface Mask / Small Components */
+
+position: absolute;
+width: 482px;
+height: 56px;
+left: 0px;
+top: 0px;
+
+/* Light / Surface */
+background: #FFFFFF;
+
+
+/* CornerFamily / Rounded | Small Components */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+/* Light / Surface */
+background: #FFFFFF;
+
+
+/* CornerFamily / Cut | Small Components */
+
+position: absolute;
+visibility: hidden;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+
+
+/* Surface Color */
+
+position: absolute;
+visibility: hidden;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+/* Light / On Surface */
+background: #000000;
+
+
+/* 24dp */
+
+position: absolute;
+visibility: hidden;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+
+
+/* Clip Label + Stroke */
+
+/* Auto Layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 0px 4px;
+
+position: absolute;
+height: 16px;
+left: 8px;
+right: 44px;
+top: 0px;
+
+
+
+/* Label + Stroke */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 696px;
+height: 16px;
+left: 4px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+align-self: flex-start;
+flex-grow: 0;
+margin: 0px 10px;
+
+
+/* Label */
+
+position: static;
+width: 220px;
+height: 16px;
+left: 0px;
+top: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 16px;
+/* identical to box height, or 80% */
+display: flex;
+align-items: center;
+letter-spacing: 0.5px;
+
+/* Gray 2 */
+color: #4F4F4F;
+opacity: 0.6;
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+align-self: flex-end;
+flex-grow: 0;
+margin: 4px 0px;
+
+
+/* Stroke Clipping */
+
+position: static;
+width: 472px;
+height: 40px;
+left: 224px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+align-self: flex-start;
+flex-grow: 0;
+margin: 4px 0px;
+
+
+/* Stroke */
+
+position: absolute;
+left: -8px;
+right: -8px;
+top: 8px;
+bottom: -24px;
+
+opacity: 0.38;
+/* Gray 2 */
+border: 1px solid #4F4F4F;
+box-sizing: border-box;
+
+}
+
+#Start_studying_button {
+    /* Start studying button */
+
+position: absolute;
+width: 484px;
+height: 64px;
+left: 138px;
+top: 628px;
+
+
+
+/* Rectangle 4 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Red */
+background: #EB5757;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px;
+
+
+/* Start Studying */
+
+position: absolute;
+left: 7.23%;
+right: 7.44%;
+top: 21.88%;
+bottom: 21.88%;
+
+font-family: Reem Kufi;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 30px;
+/* or 75% */
+text-align: center;
+
+/* Gray 6 */
+color: #F2F2F2;
+
+}
+
+#book-party {
+    /* Lovepik_com-450017838-Students sitting up and studying art vector 1 */
+
+position: absolute;
+width: 471px;
+height: 300px;
+left: 151px;
+top: 724px;
+
+background: url(Lovepik_com-450017838-Students sitting up and studying art vector.png);
+
+}
+
+#avatar1{
+    /* Component 10 */
+
+position: absolute;
+width: 147px;
+height: 145px;
+left: 750px;
+top: 110px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Ellipse 3 */
+
+position: absolute;
+left: 100%;
+right: -100%;
+top: 0%;
+bottom: 0%;
+
+background: #C4C4C4;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* friendly-ones 1 */
+
+position: absolute;
+left: -10.94%;
+right: 0%;
+top: -4.69%;
+bottom: -179.69%;
+
+background: url(friendly-ones.png);
+
+}
+
+#change_arrow{
+    /* Component 22 */
+
+position: absolute;
+width: 103px;
+height: 32px;
+left: 772px;
+top: 263px;
+
+
+
+/* Change */
+
+position: absolute;
+left: 0%;
+right: 31.07%;
+top: 0%;
+bottom: 0%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* Gray 3 */
+color: #828282;
+
+
+/* keyboard_arrow_down_24px */
+
+position: absolute;
+left: 68.93%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+
+
+/* icon/hardware/keyboard_arrow_down_24px */
+
+position: absolute;
+left: 26.72%;
+right: 26.72%;
+top: 36.28%;
+bottom: 36.28%;
+
+/* Red */
+background: #EB5757;
+
+}
+
+#home_red_username{
+    /* Username: */
+
+position: absolute;
+width: 195px;
+height: 30px;
+left: 927px;
+top: 110px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 30px;
+/* identical to box height, or 75% */
+display: flex;
+align-items: center;
+
+/* Red */
+color: #EB5757;
+
+}
+
+#home_grey_username{
+    /* (Username) */
+
+position: absolute;
+width: 254px;
+height: 38px;
+left: 927px;
+top: 147px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 30px;
+/* or 100% */
+display: flex;
+align-items: center;
+
+/* Gray 3 */
+color: #828282;
+
+}
+
+#change {
+    /* Change */
+
+position: absolute;
+width: 78px;
+height: 32px;
+left: 1109px;
+top: 150px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* Gray 3 */
+color: #828282;
+
+}
+
+#home_right_arrow{
+    /* keyboard_arrow_right_24px */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 1176px;
+top: 150px;
+
+
+
+/* icon/hardware/keyboard_arrow_right_24px */
+
+position: absolute;
+left: 36.28%;
+right: 36.28%;
+top: 26.72%;
+bottom: 26.72%;
+
+/* Red */
+background: #EB5757;
+
+}
+
+#home_email_address{
+    /* E-mail address: */
+
+position: absolute;
+width: 225px;
+height: 30px;
+left: 927px;
+top: 217px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 30px;
+/* identical to box height, or 94% */
+display: flex;
+align-items: center;
+
+/* Red */
+color: #EB5757;
+
+}
+
+#something-example.com{
+/* something@example.com */
+
+position: absolute;
+width: 281px;
+height: 38px;
+left: 927px;
+top: 254px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 30px;
+/* or 125% */
+display: flex;
+align-items: center;
+
+/* Gray 3 */
+color: #828282;
+
+}
+
+#change {
+    /* Change */
+
+position: absolute;
+width: 78px;
+height: 32px;
+left: 1229px;
+top: 257px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* Gray 3 */
+color: #828282;
+
+}
+
+#home_right_arrow{
+    /* keyboard_arrow_right_24px */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 1296px;
+top: 257px;
+
+
+
+/* icon/hardware/keyboard_arrow_right_24px */
+
+position: absolute;
+left: 36.28%;
+right: 36.28%;
+top: 26.72%;
+bottom: 26.72%;
+
+/* Red */
+background: #EB5757;
+
+}
+
+#home_Rectangle{
+    /* Rectangle 7 */
+
+position: absolute;
+width: 35px;
+height: 33px;
+left: 933px;
+top: 306px;
+
+/* Gray 4 */
+border: 1px solid #BDBDBD;
+box-sizing: border-box;
+border-radius: 10px;
+
+}
+
+#display_email{
+    /* Display e-mail publicly */
+
+position: absolute;
+width: 213px;
+height: 32px;
+left: 983px;
+top: 307px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* Gray 3 */
+color: #828282;
+
+}
+
+#chat_status {
+    /* Chat status: */
+
+position: absolute;
+width: 174px;
+height: 30px;
+left: 927px;
+top: 367px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 30px;
+/* identical to box height, or 94% */
+display: flex;
+align-items: center;
+
+/* Red */
+color: #EB5757;
+
+}
+
+#chatstatus_text {
+    /* Component 13 */
+
+position: absolute;
+width: 457px;
+height: 155px;
+left: 927px;
+top: 409px;
+
+
+
+/* Rectangle 8 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Gray 4 */
+border: 1px solid #BDBDBD;
+box-sizing: border-box;
+border-radius: 10px;
+
+
+/* Lorem ipsum sapien eget mi proin sed libero enim sed faucibus turpis in eu mi bibendum neque egestas congue quisque egestas diam.| */
+
+position: absolute;
+left: 2.41%;
+right: 2.84%;
+top: 7.1%;
+bottom: 7.74%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+
+/* Gray 2 */
+color: #4F4F4F;
+
+}
+
+#changepassword {
+    /* Change Password */
+
+position: absolute;
+width: 192px;
+height: 32px;
+left: 927px;
+top: 576px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* Gray 3 */
+color: #828282;
+
+}
+
+#home_right_arrow{
+    /* keyboard_arrow_right_24px */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 1084px;
+top: 576px;
+
+
+
+/* icon/hardware/keyboard_arrow_right_24px */
+
+position: absolute;
+left: 36.28%;
+right: 36.28%;
+top: 26.72%;
+bottom: 26.72%;
+
+/* Red */
+background: #EB5757;
+
+}
+
+#horizontal_line {
+    /* Line 6 */
+
+position: absolute;
+width: 682px;
+height: 0px;
+left: 720px;
+top: 628px;
+
+/* Gray 4 */
+border: 1px solid #BDBDBD;
+
+}
+
+#mostrecentbuddy {
+    /* Most Recent Study Buddies */
+
+position: absolute;
+width: 489px;
+height: 30px;
+left: 772px;
+top: 657px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 30px;
+/* identical to box height, or 75% */
+display: flex;
+align-items: center;
+text-decoration-line: underline;
+
+/* Gray 2 */
+color: #4F4F4F;
+border: 1px solid #000000;
+
+}
+
+#avatar2 {
+    /* Component 10 */
+
+position: absolute;
+width: 72px;
+height: 72px;
+left: 783px;
+top: 726px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Ellipse 2 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #C4C4C4;
+
+
+/* friendly-ones (1) 1 */
+
+position: absolute;
+left: -14.06%;
+right: 0%;
+top: -20.31%;
+bottom: -176.56%;
+
+background: url(friendly-ones(1).png);
+
+}
+
+#home_black_username {
+    /* (Username) */
+
+position: absolute;
+width: 254px;
+height: 38px;
+left: 876px;
+top: 730px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 30px;
+/* or 100% */
+display: flex;
+align-items: center;
+
+/* Gray 2 */
+color: #4F4F4F;
+
+}
+
+#view_profile{
+    /* Component 15 */
+
+position: absolute;
+width: 136px;
+height: 32px;
+left: 881px;
+top: 762px;
+
+
+
+/* View Profile */
+
+position: absolute;
+left: 0%;
+right: 21.32%;
+top: 0%;
+bottom: 0%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* Gray 3 */
+color: #828282;
+
+
+/* keyboard_arrow_right_24px */
+
+position: absolute;
+left: 82.35%;
+right: 0%;
+top: 12.5%;
+bottom: 12.5%;
+
+
+
+/* icon/hardware/keyboard_arrow_right_24px */
+
+position: absolute;
+left: 36.28%;
+right: 36.28%;
+top: 26.72%;
+bottom: 26.72%;
+
+/* Red */
+background: #EB5757;
+
+}
+
+#avatar3{
+    /* Component 11 */
+
+position: absolute;
+width: 72px;
+height: 72px;
+left: 782px;
+top: 821px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Ellipse 2 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #C4C4C4;
+
+
+/* friendly-ones (2) 1 */
+
+position: absolute;
+left: -21.88%;
+right: -1.56%;
+top: -23.44%;
+bottom: -221.88%;
+
+background: url(friendly-ones (2).png);
+
+}
+
+#home_black_username{
+    /* (Username) */
+
+position: absolute;
+width: 254px;
+height: 38px;
+left: 876px;
+top: 825px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 30px;
+/* or 100% */
+display: flex;
+align-items: center;
+
+/* Gray 2 */
+color: #4F4F4F;
+
+}
+
+#view_profile{
+    /* Component 16 */
+
+position: absolute;
+width: 136px;
+height: 32px;
+left: 881px;
+top: 857px;
+
+
+
+/* View Profile */
+
+position: absolute;
+left: 0%;
+right: 21.32%;
+top: 0%;
+bottom: 0%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* Gray 3 */
+color: #828282;
+
+
+/* keyboard_arrow_right_24px */
+
+position: absolute;
+left: 82.35%;
+right: 0%;
+top: 12.5%;
+bottom: 12.5%;
+
+
+
+/* icon/hardware/keyboard_arrow_right_24px */
+
+position: absolute;
+left: 36.28%;
+right: 36.28%;
+top: 26.72%;
+bottom: 26.72%;
+
+/* Red */
+background: #EB5757;
+
+}
+
+#avatar4 {
+    /* Component 12 */
+
+position: absolute;
+width: 72px;
+height: 72px;
+left: 782px;
+top: 916px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+/* Ellipse 4 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #C4C4C4;
+
+
+/* friendly-ones (3) 1 */
+
+position: absolute;
+left: -9.38%;
+right: -12.5%;
+top: -28.12%;
+bottom: -220.31%;
+
+background: url(friendly-ones (3).png);
+
+}
+
+#home_black_username{
+    /* (Username) */
+
+position: absolute;
+width: 254px;
+height: 38px;
+left: 881px;
+top: 924px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 30px;
+/* or 100% */
+display: flex;
+align-items: center;
+
+/* Gray 2 */
+color: #4F4F4F;
+
+}
+
+#view_profile {
+    /* Component 17 */
+
+position: absolute;
+width: 136px;
+height: 32px;
+left: 886px;
+top: 956px;
+
+
+
+/* View Profile */
+
+position: absolute;
+left: 0%;
+right: 21.32%;
+top: 0%;
+bottom: 0%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 30px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* Gray 3 */
+color: #828282;
+
+
+/* keyboard_arrow_right_24px */
+
+position: absolute;
+left: 82.35%;
+right: 0%;
+top: 12.5%;
+bottom: 12.5%;
+
+
+
+/* icon/hardware/keyboard_arrow_right_24px */
+
+position: absolute;
+left: 36.28%;
+right: 36.28%;
+top: 26.72%;
+bottom: 26.72%;
+
+/* Red */
+background: #EB5757;
+
+}
+
+#logout {
+    /* Log out button */
+
+position: absolute;
+width: 250px;
+height: 64px;
+left: 1171px;
+top: 934px;
+
+
+
+/* Rectangle 4 */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* Red */
+background: #EB5757;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px;
+
+
+/* Log out → */
+
+position: absolute;
+left: 7.23%;
+right: 7.44%;
+top: 21.88%;
+bottom: 21.88%;
+
+font-family: Reem Kufi;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 30px;
+/* or 75% */
+text-align: center;
+
+/* Gray 6 */
+color: #F2F2F2;
+
+}
