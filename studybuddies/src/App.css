@@ -58,14 +58,14 @@
 #authLogos {
   position: absolute;
   top:40%;;
-  left:73%;
+  left:70%;
   transform: translate(-25%, -25%);
 }
 #txt4 {
   text-align: justify;
   position: absolute;
   font-size: 30px;
-  left:75%;
+  left:70%;
   top:25%;
   width:400px;
   font-style: "Roboto";
@@ -98,7 +98,7 @@
 #Forms {
   position: absolute;
   width:500px;
-  left: 85%;
+  left: 83%;
   top:60%;
   transform: translate(-75%, -50%);
 }
