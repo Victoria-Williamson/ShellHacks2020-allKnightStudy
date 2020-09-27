@@ -1,0 +1,40 @@
+#titleBar {
+    top: 0px;
+    margin-top: 20px;
+    position: absolute;
+}
+
+#miroodles-homepage {
+    /* miroodles */
+position: absolute;
+width: 200px;
+height: 185.78px;
+left: 38px;
+top: 98px;
+
+background: url(miroodles(7).png); /*????????????????*/
+
+}
+
+#heythere-text {
+    /* Hey there (Username)!Welcome back to allKnight Study! Edit your profile or sign up for your next study session below. */
+
+position: absolute;
+width: 399px;
+height: 163px;
+left: 268px;
+top: 110px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 30px;
+/* or 125% */
+display: flex;
+align-items: center;
+
+/* Gray 2 */
+color: #4F4F4F;
+
+}
